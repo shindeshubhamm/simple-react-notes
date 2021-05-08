@@ -1,0 +1,103 @@
+html {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfdfd;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* MEDIA QUERIES - Primary layout.
+  ========================================================================== */
+
+// max screen width
+@mixin scMax($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
+
+// COLORS
+$primary: #5d5c61;
+$plight: #938e94;
+$secondary: #557a95;
+$slight: #7395ae;
+$lighter: #b1a296;
+
+// MY CONTAINER
+.my-cont {
+    height: 100vh;
+    overflow: hidden;
+    .myheader {
+        display: flex;
+        align-items: center;
+        margin: 28px 0;
+        .logo-wrapper {
+            background-color: rgba($slight, 0.14);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logo {
+                font-size: 24px;
+            }
+        }
+        .appname {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 14px;
+            color: $primary;
+        }
+    }
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include scMax(960) {
+        .content-wrapper {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .myheader {
+            .appname {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// COMMON STYLES
+.section-head {
+    display: flex;
+    align-items: center;
+    svg {
+        font-size: 20px;
+        color: $secondary;
+        margin-right: 10px;
+    }
+    .s-title {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+    }
+}

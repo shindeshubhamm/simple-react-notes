@@ -1,0 +1,7 @@
+.user-wrapper {
+    width: 50%;
+
+    @include scMax(960) {
+        width: 100%;
+    }
+}
