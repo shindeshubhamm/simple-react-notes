@@ -8,9 +8,15 @@ body {
     background-color: #fdfdfd;
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #f1f1f1;
+}
+
 // Scrollbar
 ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
 }
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
@@ -47,7 +53,7 @@ $lighter: #b1a296;
     .myheader {
         display: flex;
         align-items: center;
-        margin: 28px 0;
+        margin: 28px 10px;
         .logo-wrapper {
             background-color: rgba($slight, 0.14);
             width: 40px;
@@ -72,6 +78,7 @@ $lighter: #b1a296;
     }
 
     @include scMax(960) {
+        overflow-y: auto;
         .content-wrapper {
             flex-direction: column;
             justify-content: flex-start;

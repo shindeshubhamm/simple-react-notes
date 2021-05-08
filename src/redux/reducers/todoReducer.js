@@ -1,8 +1,8 @@
-import { FETCH_TODOS, TODO_FETCH_SUCCESS, TODO_FETCH_FAIL } from '../types';
+import { TODO_FETCH_SUCCESS, TODO_FETCH_FAIL } from '../types';
 
 const initialState = {
     todos: [],
-    loading: false,
+    loading: true,
     error: false,
 };
 
@@ -10,12 +10,6 @@ const todoReducer = (state = initialState, action) => {
     const { type, payload } = action;
 
     switch (type) {
-        case FETCH_TODOS:
-            return {
-                ...state,
-                loading: true,
-            };
-
         case TODO_FETCH_SUCCESS:
             return {
                 ...state,

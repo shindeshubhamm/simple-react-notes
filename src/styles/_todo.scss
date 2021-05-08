@@ -1,7 +1,20 @@
 .todo-wrapper {
     width: 50%;
-
+    padding: 10px;
+    .table-wrapper {
+        margin-top: 18px;
+        max-height: calc(100vh - 200px);
+        font-size: 14px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+    }
     @include scMax(960) {
         width: 100%;
+        margin-bottom: 20px;
+        .table-wrapper {
+            max-height: 50vh;
+        }
     }
 }

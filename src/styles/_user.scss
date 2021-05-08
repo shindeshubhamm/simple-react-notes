@@ -1,7 +1,45 @@
 .user-wrapper {
     width: 50%;
+    padding: 10px 40px 100px 10px;
+    min-height: 500px;
+    .view-data {
+        margin-top: 18px;
+        .note-data {
+            .n-id {
+                font-size: 16px;
+                font-weight: 500;
+                color: $plight;
+                margin: 0;
+                span {
+                    color: $primary;
+                }
+            }
+            .n-title {
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+        .user-data {
+            margin-top: 30px;
+            .data-type {
+                color: $lighter;
+                margin: 12px 0 0;
+                font-size: 14px;
+            }
+            .user-fullname {
+                font-size: 24px;
+                font-weight: 600;
+                color: $secondary;
+            }
+            .username {
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+    }
 
     @include scMax(960) {
         width: 100%;
+        padding: 10px 10px 100px 10px;
     }
 }

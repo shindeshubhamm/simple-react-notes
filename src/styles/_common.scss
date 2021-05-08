@@ -1,0 +1,33 @@
+.alerts-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+    .myalert {
+        margin: 5px 0;
+        width: 400px;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    @include scMax(600) {
+        max-width: 100%;
+        .myalert {
+            width: auto;
+            font-size: 14px;
+        }
+    }
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .myspinner {
+        border-width: 2px;
+        height: 24px;
+        width: 24px;
+        margin-right: 10px;
+    }
+}
